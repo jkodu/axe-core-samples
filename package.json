@@ -1,0 +1,27 @@
+{
+  "name": "axe-core-samples",
+  "version": "1.0.0",
+  "description": "Samples demonstrating axe-core features and usages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkodu/axe-core-samples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkodu/axe-core-samples/issues"
+  },
+  "homepage": "https://github.com/jkodu/axe-core-samples#readme",
+  "dependencies": {
+    "axe-core": "^3.1.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-markdown": "^3.0.0",
+    "gulp-rename": "^1.4.0"
+  }
+}

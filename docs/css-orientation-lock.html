@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Axe-Core CSSOM - Rule - CSS Orientation Lock </title>
+  <meta charset="utf8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/gutenberg-css@0.4">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css-orientation-lock.css">
+</head>
+
+<body>
+  <p>
+     This page is running `axe` with config `preload: true`, which fetches 3 external stylesheets and a relative stylesheet.
+     The rule then parses the CSSOM object to decipher any orientation lock.
+     Use `devtools` to inspect the `network`, `source` and `console`.
+  </p>
+  <br><br>
+
+  <div class="someDiv">some div content</div>
+  <div class="thatDiv">that div content</div>
+  <script type="text/javascript" src="axe.js"></script>
+  <script type="text/javascript">
+    axe.run({
+      runOnly: {
+        type: 'rule',
+        values: ['css-orientation-lock']
+      },
+      preload: true // essential to load CSSOM
+    },
+      function (err, res) {
+        console.log('Violations', res.violations);
+        res.incomplete.forEach(issue => console.log(issue))
+      }
+    );
+  </script>
+
+</body>
+
+</html>
